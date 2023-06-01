@@ -6,7 +6,10 @@ Use .filter when you want to remove things from an array - it will return a new 
 
 */
 
-function belowTen(numbers) {}
+function belowTen(numbers) {
+  const result = numbers.filter((number) => number < 10);
+  return result;
+}
 
 function isAttending(replies) {}
 
@@ -23,14 +26,14 @@ function multiplyByTwo(numbers) {}
 function makeGuestList(attendees) {}
 
 function cancelMemberships(members) {
-    // think about what you want in the array at the end
+  // think about what you want in the array at the end
 }
 
 module.exports = {
-    isAttending,
-    belowTen,
-    hasMultipleCats,
-    multiplyByTwo,
-    makeGuestList,
-    cancelMemberships,
+  isAttending,
+  belowTen,
+  hasMultipleCats,
+  multiplyByTwo,
+  makeGuestList,
+  cancelMemberships,
 };
