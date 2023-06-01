@@ -12,12 +12,16 @@ function belowTen(numbers) {
 }
 
 function isAttending(replies) {
-  const copyReplies = [...replies ];
-  const result = copyReplies.filter(reply=> reply.confirmed === true)
+  const copyReplies = [...replies];
+  const result = copyReplies.filter((reply) => reply.confirmed === true);
   return result;
 }
 
-function hasMultipleCats(people) {}
+function hasMultipleCats(people) {
+  const copyPeople = [...people];
+  const result = copyPeople.filter((person) => person.catCount > 0);
+  return result;
+}
 
 /**********************************************************************************************/
 

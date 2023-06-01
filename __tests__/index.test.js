@@ -94,59 +94,59 @@ describe("hasMultipleCats", () => {
     test("should return an empty array when passed empty", () => {
         expect(hasMultipleCats([])).toEqual([]);
     });
-//     test("should return array with single object of owners with multiple cats", () => {
-//         const input = [{ name: "jess", catCount: 2 }];
-//         const expected = [{ name: "jess", catCount: 2 }];
-//         expect(hasMultipleCats(input)).toEqual(expected);
-//     });
-//     test("should return array with multiple objects of owners with multiple cats", () => {
-//         const input = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//         ];
-//         const expected = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//         ];
-//         expect(hasMultipleCats(input)).toEqual(expected);
-//     });
-//     test("should return array with multiple mixed objects of owners with multiple cats", () => {
-//         const input = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//             { name: "Danny", catCount: 0 },
-//         ];
-//         const expected = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//         ];
-//         expect(hasMultipleCats(input)).toEqual(expected);
-//     });
-//     test("should not mutate input array", () => {
-//         const input = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//             { name: "Danny", catCount: 0 },
-//         ];
-//         const inputCopy = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//             { name: "Danny", catCount: 0 },
-//         ];
-//         hasMultipleCats(input);
-//         expect(input).toEqual(inputCopy);
-//     });
-//     test("should return a new array", () => {
-//         const input = [
-//             { name: "jess", catCount: 2 },
-//             { name: "Tom", catCount: 2 },
-//             { name: "Danny", catCount: 0 },
-//         ];
+    test("should return array with single object of owners with multiple cats", () => {
+        const input = [{ name: "jess", catCount: 2 }];
+        const expected = [{ name: "jess", catCount: 2 }];
+        expect(hasMultipleCats(input)).toEqual(expected);
+    });
+    test("should return array with multiple objects of owners with multiple cats", () => {
+        const input = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+        ];
+        const expected = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+        ];
+        expect(hasMultipleCats(input)).toEqual(expected);
+    });
+    test("should return array with multiple mixed objects of owners with multiple cats", () => {
+        const input = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+            { name: "Danny", catCount: 0 },
+        ];
+        const expected = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+        ];
+        expect(hasMultipleCats(input)).toEqual(expected);
+    });
+    test("should not mutate input array", () => {
+        const input = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+            { name: "Danny", catCount: 0 },
+        ];
+        const inputCopy = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+            { name: "Danny", catCount: 0 },
+        ];
+        hasMultipleCats(input);
+        expect(input).toEqual(inputCopy);
+    });
+    test("should return a new array", () => {
+        const input = [
+            { name: "jess", catCount: 2 },
+            { name: "Tom", catCount: 2 },
+            { name: "Danny", catCount: 0 },
+        ];
 
-//         const result = hasMultipleCats(input);
-//         expect(input).not.toBe(result);
-//     });
-// });
+        const result = hasMultipleCats(input);
+        expect(input).not.toBe(result);
+    });
+});
 
 // describe.skip("multiplyByTwo", () => {
 //     test("should return an empty array when passed empty", () => {
