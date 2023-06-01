@@ -36,64 +36,64 @@ describe("isAttending", () => {
     test("should return an empty array when passed empty", () => {
         expect(isAttending([])).toEqual([]);
     });
-//     test("should return single guest name confirmed", () => {
-//         const input = [{ name: "Tom", confirmed: true }];
-//         const expectedResult = [{ name: "Tom", confirmed: true }];
-//         expect(isAttending(input)).toEqual(expectedResult);
-//     });
-//     test("should return multiple guest names confirmed", () => {
-//         const input = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         const expectedResult = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         expect(isAttending(input)).toEqual(expectedResult);
-//     });
-//     test("should return multiple guest names confirmed from mixed array", () => {
-//         const input = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Dan", confirmed: false },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         const expectedResult = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         expect(isAttending(input)).toEqual(expectedResult);
-//     });
-//     test("should not mutate input array", () => {
-//         const input = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Dan", confirmed: false },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         const inputCopy = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Dan", confirmed: false },
-//             { name: "Jess", confirmed: true },
-//         ];
-//         isAttending(input);
-//         expect(input).toEqual(inputCopy);
-//     });
-//     test("should return a new array", () => {
-//         const input = [
-//             { name: "Tom", confirmed: true },
-//             { name: "Dan", confirmed: false },
-//             { name: "Jess", confirmed: true },
-//         ];
+    test("should return single guest name confirmed", () => {
+        const input = [{ name: "Tom", confirmed: true }];
+        const expectedResult = [{ name: "Tom", confirmed: true }];
+        expect(isAttending(input)).toEqual(expectedResult);
+    });
+    test("should return multiple guest names confirmed", () => {
+        const input = [
+            { name: "Tom", confirmed: true },
+            { name: "Jess", confirmed: true },
+        ];
+        const expectedResult = [
+            { name: "Tom", confirmed: true },
+            { name: "Jess", confirmed: true },
+        ];
+        expect(isAttending(input)).toEqual(expectedResult);
+    });
+    test("should return multiple guest names confirmed from mixed array", () => {
+        const input = [
+            { name: "Tom", confirmed: true },
+            { name: "Dan", confirmed: false },
+            { name: "Jess", confirmed: true },
+        ];
+        const expectedResult = [
+            { name: "Tom", confirmed: true },
+            { name: "Jess", confirmed: true },
+        ];
+        expect(isAttending(input)).toEqual(expectedResult);
+    });
+    test("should not mutate input array", () => {
+        const input = [
+            { name: "Tom", confirmed: true },
+            { name: "Dan", confirmed: false },
+            { name: "Jess", confirmed: true },
+        ];
+        const inputCopy = [
+            { name: "Tom", confirmed: true },
+            { name: "Dan", confirmed: false },
+            { name: "Jess", confirmed: true },
+        ];
+        isAttending(input);
+        expect(input).toEqual(inputCopy);
+    });
+    test("should return a new array", () => {
+        const input = [
+            { name: "Tom", confirmed: true },
+            { name: "Dan", confirmed: false },
+            { name: "Jess", confirmed: true },
+        ];
 
-//         const result = isAttending(input);
-//         expect(input).not.toBe(result);
-//     });
-// });
+        const result = isAttending(input);
+        expect(input).not.toBe(result);
+    });
+});
 
-// describe.skip("hasMultipleCats", () => {
-//     test("should return an empty array when passed empty", () => {
-//         expect(hasMultipleCats([])).toEqual([]);
-//     });
+describe("hasMultipleCats", () => {
+    test("should return an empty array when passed empty", () => {
+        expect(hasMultipleCats([])).toEqual([]);
+    });
 //     test("should return array with single object of owners with multiple cats", () => {
 //         const input = [{ name: "jess", catCount: 2 }];
 //         const expected = [{ name: "jess", catCount: 2 }];

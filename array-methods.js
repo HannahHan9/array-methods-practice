@@ -11,7 +11,11 @@ function belowTen(numbers) {
   return result;
 }
 
-function isAttending(replies) {}
+function isAttending(replies) {
+  const copyReplies = [...replies ];
+  const result = copyReplies.filter(reply=> reply.confirmed === true)
+  return result;
+}
 
 function hasMultipleCats(people) {}
 
