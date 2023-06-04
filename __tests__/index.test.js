@@ -148,133 +148,133 @@ describe("hasMultipleCats", () => {
     });
 });
 
-// describe.skip("multiplyByTwo", () => {
-//     test("should return an empty array when passed empty", () => {
-//         expect(multiplyByTwo([])).toEqual([]);
-//     });
-//     test("should multiply single number", () => {
-//         expect(multiplyByTwo([1])).toEqual([2]);
-//     });
-//     test("should multiply multiple numbers", () => {
-//         expect(multiplyByTwo([1, 2])).toEqual([2, 4]);
-//         expect(multiplyByTwo([5, 9, 10])).toEqual([10, 18, 20]);
-//     });
-//     test("should return a new array", () => {
-//         const input = [10];
-//         const result = multiplyByTwo(input);
-//         expect(result).not.toBe(input);
-//     });
-//     test("should not mutate input array", () => {
-//         const input = [10];
-//         const inputCopy = [10];
-//         multiplyByTwo(input);
-//         expect(inputCopy).toEqual(input);
-//     });
-// });
+describe("multiplyByTwo", () => {
+    test("should return an empty array when passed empty", () => {
+        expect(multiplyByTwo([])).toEqual([]);
+    });
+    test("should multiply single number", () => {
+        expect(multiplyByTwo([1])).toEqual([2]);
+    });
+    test("should multiply multiple numbers", () => {
+        expect(multiplyByTwo([1, 2])).toEqual([2, 4]);
+        expect(multiplyByTwo([5, 9, 10])).toEqual([10, 18, 20]);
+    });
+    test("should return a new array", () => {
+        const input = [10];
+        const result = multiplyByTwo(input);
+        expect(result).not.toBe(input);
+    });
+    test("should not mutate input array", () => {
+        const input = [10];
+        const inputCopy = [10];
+        multiplyByTwo(input);
+        expect(inputCopy).toEqual(input);
+    });
+});
 
-// describe.skip("makeGuestList", () => {
-//     test("should return an empty array when passed empty", () => {
-//         expect(makeGuestList([])).toEqual([]);
-//     });
-//     test("should return name of single guest attending", () => {
-//         const input = [{ name: "Dan", age: 20 }];
-//         const expectedResult = ["Dan"];
-//         expect(makeGuestList(input)).toEqual(expectedResult);
-//     });
-//     test("should return name of multiple guests attending", () => {
-//         const input = [
-//             { name: "Dan", age: 20 },
-//             { name: "Jess", age: 21 },
-//             { name: "Bill", age: 50 },
-//         ];
-//         const expectedResult = ["Dan", "Jess", "Bill"];
-//         expect(makeGuestList(input)).toEqual(expectedResult);
-//     });
-//     test("should return a new array", () => {
-//         const input = [
-//             { name: "Dan", age: 20 },
-//             { name: "Jess", age: 21 },
-//             { name: "Bill", age: 50 },
-//         ];
-//         const result = makeGuestList(input);
-//         expect(result).not.toBe(input);
-//     });
-//     test("should not mutate input array", () => {
-//         const input = [
-//             { name: "Dan", age: 20 },
-//             { name: "Jess", age: 21 },
-//             { name: "Bill", age: 50 },
-//         ];
-//         const inputCopy = [
-//             { name: "Dan", age: 20 },
-//             { name: "Jess", age: 21 },
-//             { name: "Bill", age: 50 },
-//         ];
-//         makeGuestList(input);
-//         expect(input).not.toBe(inputCopy);
-//     });
-// });
+describe("makeGuestList", () => {
+    test("should return an empty array when passed empty", () => {
+        expect(makeGuestList([])).toEqual([]);
+    });
+    test("should return name of single guest attending", () => {
+        const input = [{ name: "Dan", age: 20 }];
+        const expectedResult = ["Dan"];
+        expect(makeGuestList(input)).toEqual(expectedResult);
+    });
+    test("should return name of multiple guests attending", () => {
+        const input = [
+            { name: "Dan", age: 20 },
+            { name: "Jess", age: 21 },
+            { name: "Bill", age: 50 },
+        ];
+        const expectedResult = ["Dan", "Jess", "Bill"];
+        expect(makeGuestList(input)).toEqual(expectedResult);
+    });
+    test("should return a new array", () => {
+        const input = [
+            { name: "Dan", age: 20 },
+            { name: "Jess", age: 21 },
+            { name: "Bill", age: 50 },
+        ];
+        const result = makeGuestList(input);
+        expect(result).not.toBe(input);
+    });
+    test("should not mutate input array", () => {
+        const input = [
+            { name: "Dan", age: 20 },
+            { name: "Jess", age: 21 },
+            { name: "Bill", age: 50 },
+        ];
+        const inputCopy = [
+            { name: "Dan", age: 20 },
+            { name: "Jess", age: 21 },
+            { name: "Bill", age: 50 },
+        ];
+        makeGuestList(input);
+        expect(input).toEqual(inputCopy);
+    });
+});
 
-// describe.skip("cancelMemberships", () => {
-//     test("should return an empty array when passed empty", () => {
-//         expect(cancelMemberships([])).toEqual([]);
-//     });
-//     test("should return an members already cancelled", () => {
-//         const input = [{ memberId: 10, status: "cancelled" }];
-//         const expected = [{ memberId: 10, status: "cancelled" }];
-//         expect(cancelMemberships(input)).toEqual(expected);
-//     });
-//     test("should return cancel single member", () => {
-//         const input = [{ memberId: 10, status: "active" }];
-//         const expected = [{ memberId: 10, status: "cancelled" }];
-//         expect(cancelMemberships(input)).toEqual(expected);
-//     });
-//     test("should return cancel multiple members", () => {
-//         const input = [
-//             { memberId: 10, status: "active" },
-//             { memberId: 1022, status: "active" },
-//         ];
-//         const expected = [
-//             { memberId: 10, status: "cancelled" },
-//             { memberId: 1022, status: "cancelled" },
-//         ];
-//         expect(cancelMemberships(input)).toEqual(expected);
-//     });
-//     test("should return cancel multiple members with mixed statuses", () => {
-//         const input = [
-//             { memberId: 10, status: "active" },
-//             { memberId: 1022, status: "active" },
-//             { memberId: 505, status: "cancelled" },
-//         ];
-//         const expected = [
-//             { memberId: 10, status: "cancelled" },
-//             { memberId: 1022, status: "cancelled" },
-//             { memberId: 505, status: "cancelled" },
-//         ];
-//         expect(cancelMemberships(input)).toEqual(expected);
-//     });
-//     test("should not mutate input array", () => {
-//         const input = [
-//             { memberId: 10, status: "active" },
-//             { memberId: 1022, status: "active" },
-//             { memberId: 505, status: "cancelled" },
-//         ];
-//         const inputCopy = [
-//             { memberId: 10, status: "active" },
-//             { memberId: 1022, status: "active" },
-//             { memberId: 505, status: "cancelled" },
-//         ];
-//         cancelMemberships(input);
-//         expect(input).toEqual(inputCopy);
-//     });
-//     test("should return a new array", () => {
-//         const input = [
-//             { memberId: 10, status: "active" },
-//             { memberId: 1022, status: "active" },
-//             { memberId: 505, status: "cancelled" },
-//         ];
+describe("cancelMemberships", () => {
+    test("should return an empty array when passed empty", () => {
+        expect(cancelMemberships([])).toEqual([]);
+    });
+    test("should return an members already cancelled", () => {
+        const input = [{ memberId: 10, status: "cancelled" }];
+        const expected = [{ memberId: 10, status: "cancelled" }];
+        expect(cancelMemberships(input)).toEqual(expected);
+    });
+    test("should return cancel single member", () => {
+        const input = [{ memberId: 10, status: "active" }];
+        const expected = [{ memberId: 10, status: "cancelled" }];
+        expect(cancelMemberships(input)).toEqual(expected);
+    });
+    test("should return cancel multiple members", () => {
+        const input = [
+            { memberId: 10, status: "active" },
+            { memberId: 1022, status: "active" },
+        ];
+        const expected = [
+            { memberId: 10, status: "cancelled" },
+            { memberId: 1022, status: "cancelled" },
+        ];
+        expect(cancelMemberships(input)).toEqual(expected);
+    });
+    test("should return cancel multiple members with mixed statuses", () => {
+        const input = [
+            { memberId: 10, status: "active" },
+            { memberId: 1022, status: "active" },
+            { memberId: 505, status: "cancelled" },
+        ];
+        const expected = [
+            { memberId: 10, status: "cancelled" },
+            { memberId: 1022, status: "cancelled" },
+            { memberId: 505, status: "cancelled" },
+        ];
+        expect(cancelMemberships(input)).toEqual(expected);
+    });
+    test("should not mutate input array", () => {
+        const input = [
+            { memberId: 10, status: "active" },
+            { memberId: 1022, status: "active" },
+            { memberId: 505, status: "cancelled" },
+        ];
+        const inputCopy = [
+            { memberId: 10, status: "active" },
+            { memberId: 1022, status: "active" },
+            { memberId: 505, status: "cancelled" },
+        ];
+        cancelMemberships(input);
+        expect(input).toEqual(inputCopy);
+    });
+    test("should return a new array", () => {
+        const input = [
+            { memberId: 10, status: "active" },
+            { memberId: 1022, status: "active" },
+            { memberId: 505, status: "cancelled" },
+        ];
 
-//         const result = cancelMemberships(input);
-//         expect(result).not.toBe(input);
-//     });
-// });
+        const result = cancelMemberships(input);
+        expect(result).not.toBe(input);
+    });
+});

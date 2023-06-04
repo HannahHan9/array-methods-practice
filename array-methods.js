@@ -29,12 +29,28 @@ function hasMultipleCats(people) {
 
 // .map will return an array the same length as the input. It will perform a function/operation on each element in the array
 
-function multiplyByTwo(numbers) {}
+function multiplyByTwo(numbers) {
+  const numbersCopy = [...numbers];
+  const result = numbersCopy.map((num) => num * 2);
+  return result;
+}
 
-function makeGuestList(attendees) {}
+function makeGuestList(attendees) {
+  const result = attendees.map((attendee) => attendee.name);
+  return result;
+}
 
 function cancelMemberships(members) {
-  // think about what you want in the array at the end
+  // const copyMembers = [...members];
+  if (members.length === 0) return [];
+  const cancelledMembers = members.map((member) => {
+    if (member.status === "active") {
+      member.status = "cancelled";
+    } else if (member.status === "cancelled") {
+      member.status = "cancelled";
+    }
+  });
+  return cancelledMembers;
 }
 
 module.exports = {
